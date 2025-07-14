@@ -20,7 +20,7 @@ MODEL_NAME = "google/gemma-3n-e4b-it"
 # --- Flask Setup ---
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "http://localhost:5173"}})
+CORS(app, resources={r"/*": {"origins": os.getenv("FRONTEND_ORIGIN", "*")}})
 
 # --- Helpers ---
 def call_nvidia_nim(messages, model=MODEL_NAME, max_tokens=250):
