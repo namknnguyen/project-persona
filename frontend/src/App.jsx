@@ -308,7 +308,7 @@ export default function App() {
         }
         setIsEvaluating(true);
         try {
-            const response = await fetch('http://127.0.0.1:5000/evaluate', {
+            const response = await fetch('https://project-persona-backend.onrender.com/evaluate', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ 
@@ -343,7 +343,7 @@ export default function App() {
     const sendApiRequest = async (messagesForApi) => {
         setIsTyping(true);
         try {
-            const response = await fetch('http://127.0.0.1:5000/chat', {
+            const response = await fetch('https://project-persona-backend.onrender.com/chat', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ 
