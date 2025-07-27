@@ -393,6 +393,7 @@ export default function App() {
         setMessages(newMessages);
         setInput('');
         setStagedImage(null);
+        resetTranscript()
         
         sendApiRequest(newMessages);
     };
