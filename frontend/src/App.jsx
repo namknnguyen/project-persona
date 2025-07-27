@@ -376,7 +376,6 @@ export default function App() {
         if (!input.trim() && !stagedImage) return;
         SpeechRecognition.stopListening();
         cancel();
-        // setIsTyping(true); // You might want to move this to after the message is added locally
 
         let userMessage = {
             id: `msg-${Date.now()}`,
@@ -385,20 +384,15 @@ export default function App() {
             rating: null,
         };
 
-        // --- MODIFICATION START ---
-        // Directly attach the staged image data to the message object.
-        // The /upload_image call has been removed.
         if (stagedImage) {
-            userMessage.imageSrc = stagedImage; // The base64 data URL
+            userMessage.imageSrc = stagedImage; 
         }
         
         const newMessages = [...messages, userMessage];
         setMessages(newMessages);
         setInput('');
         setStagedImage(null);
-        resetTranscript();
         
-        // The API request now sends the message with the embedded image data.
         sendApiRequest(newMessages);
     };
     
