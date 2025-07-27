@@ -262,13 +262,14 @@ export default function App() {
     }
 
     const onToggleListening = () => {
+        console.log("Mic button clicked! Current 'listening' state:", listening); // <-- ADD THIS LINE
         if (listening) {
             SpeechRecognition.stopListening();
         } else {
             resetTranscript();
-            SpeechRecognition.startListening({ 
-                continuous: true, 
-                language: getLanguageCode(language) 
+            SpeechRecognition.startListening({
+                continuous: true,
+                language: getLanguageCode(language)
             });
         }
     };
