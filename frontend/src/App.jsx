@@ -267,6 +267,9 @@ export default function App() {
             SpeechRecognition.stopListening();
         } else {
             resetTranscript();
+            SpeechRecognition.startListening({
+                language: getLanguageCode(language)
+            });
             SpeechRecognition.startListening();
         }
     };
