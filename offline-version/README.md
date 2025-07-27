@@ -9,10 +9,12 @@ Run these commands on 2 separate terminals:
 
 1:
 cd frontend
+
 npm run dev
 
 2:
 cd backend
+
 flask run
 
 Access at http://localhost:5173/ in a browser.
