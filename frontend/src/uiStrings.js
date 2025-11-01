@@ -5,7 +5,7 @@ export const uiStrings = {
        capture: "Capture",
        language: "Language",
        personaChat: "Persona Chat",
-       appDescription: "Select a situation and language to practice your conversational skills.",
+       appDescription: "Select a situation and language to practice your conversational skills. Disclaimer: This site uses an AI model (Gemma 3N via NVIDIA API) to generate responses that may be inaccurate or inappropriate, and the creator is not responsible for any actions or decisions made based on the chatbot’s output.",
        startSession: "Start Session",
        analyzing: "Analyzing...",
        endAndGetFeedback: "End & Get Feedback",
