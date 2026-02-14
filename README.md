@@ -1,4 +1,4 @@
-Conversational coach app.
+Conversational coach & language learning app.
 Try demo at: https://project-persona.onrender.com/
 
 Features:
